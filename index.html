@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.1.0/mapbox-gl.css" rel="stylesheet"> <!-- Mapbox link -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.1.0/mapbox-gl.js"></script>
+    <title>Covid +19</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div h1{
+            text-align: center;
+            margin: 24px;
+        }
+        #Map{
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Covid+19</h1>
+    </div>
+    <div id="Map"> </div>
+</body>
+    <!-- Javascript File -->
+    <script src="index.js"></script>
+    
+    <!-- Mapbox include File path copy from (https://docs.mapbox.com/mapbox-gl-js/example/external-geojson/) -->
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiZ2F1cmF2MTcyOSIsImEiOiJjbHJxZDM0YTMwMXFhMmtueGFleWYxNHRqIn0.LKqvDIPH7T3IADZJ6RvgtA';
+        const map = new mapboxgl.Map({
+            container: 'Map',                                // container ID
+            style: 'mapbox://styles/mapbox/streets-v12',    // style URL
+            zoom: 2,                                       // starting zoom
+            center: [138.043, 35.201]                     // starting center
+        });
+    </script>
+
+</html>
